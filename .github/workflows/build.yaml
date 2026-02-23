@@ -1,0 +1,29 @@
+---
+name: build reveal js
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+        with:
+          repository: 'hakimel/real.js'
+          path: docs/
+      - name: debug
+        run: |
+          ls -lR
+      - name: generate revealjs using pandoc
+        uses: docker://pandoc/core:latest
+        with:
+          args: >-
+            --from=gfm
+            --to=revealjs
+            --self-contained
+            --standalone
+            --output=docs/index.html
+            -V revealjs-url=https://revaljs.com
+            show-n-tell.md
