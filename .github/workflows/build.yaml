@@ -40,10 +40,10 @@ jobs:
             --output=docs/index.html
             -V revealjs-url=https://unpkg.com/reveal.js
             show-n-tell.md
-            # https://revealjs.com/themes/
-            # https://gist.github.com/jonashackt/85f9df62986db4e70396e3c494e26b76
-            # https://github.com/gaerfield/reveal-md-github-pages
-            # https://gist.github.com/jsoma/629b9564af5b1e7fa62d0a3a0a47c296
+          # https://revealjs.com/themes/
+          # https://gist.github.com/jonashackt/85f9df62986db4e70396e3c494e26b76
+          # https://github.com/gaerfield/reveal-md-github-pages
+          # https://gist.github.com/jsoma/629b9564af5b1e7fa62d0a3a0a47c296
       - name: debug
         run: |
           ls -lR
