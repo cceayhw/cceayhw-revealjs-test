@@ -38,6 +38,7 @@ jobs:
             --self-contained
             --standalone
             --output=docs/index.html
+            -V revealjs-url=https://unpkg.com/reveal.js
             show-n-tell.md
       - name: debug
         run: |
